@@ -357,6 +357,20 @@ $utilities: map-merge(
       class: ms,
       values: map-merge($spacers, (auto: auto))
     ),
+    // restore left-right because you don't invert the entire page when people
+    // are reading rtl but you were using these classes for structure not flow.
+    "margin-left": (
+      responsive: true,
+      property: margin-left,
+      class: ml,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "margin-right": (
+      responsive: true,
+      property: margin-right,
+      class: mr,
+      values: map-merge($spacers, (auto: auto))
+    ),
     // Negative margin utilities
     "negative-margin": (
       responsive: true,
@@ -442,6 +456,20 @@ $utilities: map-merge(
       property: padding-left,
       class: ps,
       values: $spacers
+    ),
+    // restore left-right because you don't invert the entire page when people
+    // are reading rtl but you were using these classes for structure not flow.
+    "padding-left": (
+      responsive: true,
+      property: padding-left,
+      class: pl,
+      values: map-merge($spacers, (auto: auto))
+    ),
+    "padding-right": (
+      responsive: true,
+      property: padding-right,
+      class: pr,
+      values: map-merge($spacers, (auto: auto))
     ),
     // Gap utility
     "gap": (

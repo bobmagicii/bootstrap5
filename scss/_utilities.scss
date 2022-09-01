@@ -363,13 +363,15 @@ $utilities: map-merge(
       responsive: true,
       property: margin-left,
       class: ml,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers, (auto: auto)),
+      rtl: false
     ),
     "margin-right": (
       responsive: true,
       property: margin-right,
       class: mr,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers, (auto: auto)),
+      rtl: false
     ),
     // Negative margin utilities
     "negative-margin": (
@@ -463,13 +465,15 @@ $utilities: map-merge(
       responsive: true,
       property: padding-left,
       class: pl,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers, (auto: auto)),
+      rtl: false
     ),
     "padding-right": (
       responsive: true,
       property: padding-right,
       class: pr,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers, (auto: auto)),
+      rtl: false
     ),
     // Gap utility
     "gap": (

@@ -4,7 +4,7 @@
 
 * Restore existence of margin and padding left-right.
 
-* Margin and padding to to 8 now.
+* Margin and padding go to 8 now.
 
 # Build
 

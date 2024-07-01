@@ -391,22 +391,6 @@ $utilities: map-merge(
       class: ms,
       values: map-merge($spacers, (auto: auto))
     ),
-    // restore left-right because you don't invert the entire page when people
-    // are reading rtl but you were using these classes for structure not flow.
-    "margin-left": (
-      responsive: true,
-      property: margin-left,
-      class: ml,
-      values: map-merge($spacers, (auto: auto)),
-      rtl: false
-    ),
-    "margin-right": (
-      responsive: true,
-      property: margin-right,
-      class: mr,
-      values: map-merge($spacers, (auto: auto)),
-      rtl: false
-    ),
     // Negative margin utilities
     "negative-margin": (
       responsive: true,
@@ -492,22 +476,6 @@ $utilities: map-merge(
       property: padding-left,
       class: ps,
       values: $spacers
-    ),
-    // restore left-right because you don't invert the entire page when people
-    // are reading rtl but you were using these classes for structure not flow.
-    "padding-left": (
-      responsive: true,
-      property: padding-left,
-      class: pl,
-      values: map-merge($spacers, (auto: auto)),
-      rtl: false
-    ),
-    "padding-right": (
-      responsive: true,
-      property: padding-right,
-      class: pr,
-      values: map-merge($spacers, (auto: auto)),
-      rtl: false
     ),
     // Gap utility
     "gap": (
@@ -831,8 +799,54 @@ $utilities: map-merge(
       property: z-index,
       class: z,
       values: $zindex-levels,
-    )
+    ),
     // scss-docs-end utils-zindex
+
+    // restore left-right because you don't invert the entire page when people
+    // are reading rtl if you were using these classes for structure not flow.
+    // - bobmagicii
+    "margin-left": (
+      responsive: true,
+      property: margin-left,
+      class: ml,
+      values: map-merge($spacers, (auto: auto)),
+      rtl: false
+    ),
+    "margin-right": (
+      responsive: true,
+      property: margin-right,
+      class: mr,
+      values: map-merge($spacers, (auto: auto)),
+      rtl: false
+    ),
+    "padding-left": (
+      responsive: true,
+      property: padding-left,
+      class: pl,
+      values: map-merge($spacers, (auto: auto)),
+      rtl: false
+    ),
+    "padding-right": (
+      responsive: true,
+      property: padding-right,
+      class: pr,
+      values: map-merge($spacers, (auto: auto)),
+      rtl: false
+    ),
+
+    // responsive ta text-align stack.
+    // - bobmagicii
+    "ta": (
+      responsive: true,
+      property: text-align,
+      class: ta,
+      values: (
+        left: left,
+        right: right,
+        center: center,
+      )
+    )
+
   ),
   $utilities
 );
